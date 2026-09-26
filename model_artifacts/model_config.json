@@ -1,0 +1,50 @@
+{
+    "model_type": "HistGradientBoostingClassifier",
+    "target": "SeriousDlqin2yrs",
+    "model_features": [
+        "RevolvingUtilizationOfUnsecuredLines",
+        "NumberOfTime30-59DaysPastDueNotWorse",
+        "DebtRatio",
+        "MonthlyIncome",
+        "NumberOfOpenCreditLinesAndLoans",
+        "NumberOfTimes90DaysLate",
+        "NumberRealEstateLoansOrLines",
+        "NumberOfTime60-89DaysPastDueNotWorse",
+        "NumberOfDependents"
+    ],
+    "audit_features": [
+        "age"
+    ],
+    "decision_threshold": 0.17,
+    "threshold_scenario": {
+        "fn_to_fp_cost_ratio": 5,
+        "description": "Illustrative threshold selected using out-of-fold expected-cost analysis."
+    },
+    "training": {
+        "test_size": 0.2,
+        "random_state": 42,
+        "cv_folds": 5,
+        "stratified": true
+    },
+    "performance": {
+        "test_roc_auc": 0.864433362031606,
+        "test_pr_auc": 0.4044113063309875,
+        "test_brier": 0.048889234134206115,
+        "test_gini": 0.7288667240632121,
+        "test_ks": 0.5746356559039979
+    },
+    "bootstrap_95_ci": {
+        "roc_auc": [
+            0.8559186916935881,
+            0.8728495921354897
+        ],
+        "pr_auc": [
+            0.380761976811412,
+            0.43008475314698213
+        ],
+        "brier": [
+            0.04695680067421386,
+            0.050733785821852034
+        ]
+    }
+}
