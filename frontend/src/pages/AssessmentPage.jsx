@@ -2,6 +2,7 @@ import { useState } from 'react'
 import InputField from '../components/InputField'
 import SectionCard from '../components/SectionCard'
 import RiskResult from '../components/RiskResult'
+import { assessRisk } from '../services/api'
 
 const INITIAL_FORM_DATA = {
   RevolvingUtilizationOfUnsecuredLines: '',
@@ -199,19 +200,7 @@ function AssessmentPage() {
     }
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/predict', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payload),
-      })
-
-      if (!response.ok) {
-        throw new Error(`API request failed with status ${response.status}`)
-      }
-
-      const data = await response.json()
+      const data = await assessRisk(payload)
 
       setResult(data)
     } catch (error) {
