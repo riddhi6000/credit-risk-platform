@@ -24,5 +24,13 @@ test = [
     "httpx",
 ]
 
+train = [
+    "jupyter",
+    "matplotlib",
+    "seaborn",
+    "optuna",
+    "fairlearn",
+]
+
 [tool.setuptools.packages.find]
 where = ["src"]

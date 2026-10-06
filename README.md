@@ -28,6 +28,10 @@ This project focuses on building a complete prediction workflow rather than only
 - React user interface
 - Docker deployment
 
+The full training pipeline — EDA, leakage-safe CV, the WoE scorecard,
+Optuna tuning, SHAP, and the fairness audit — is in
+[`training/credit_risk_model_development.ipynb`](training/credit_risk_model_development.ipynb).
+
 ---
 
 ## Key Results
