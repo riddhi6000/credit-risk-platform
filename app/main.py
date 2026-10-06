@@ -7,6 +7,8 @@ from pydantic import BaseModel, ConfigDict
 
 from src.credit_risk.predictor import CreditRiskPredictor
 
+import os
+
 
 # Project root directory
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -28,12 +30,12 @@ app = FastAPI(
     version="1.0.0",
 )
 
+_default_origins = "http://localhost:5173,http://127.0.0.1:5173"
+ALLOWED_ORIGINS = os.environ.get("ALLOWED_ORIGINS", _default_origins).split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
