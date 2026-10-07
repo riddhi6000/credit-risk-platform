@@ -6,6 +6,9 @@ The project combines a leakage-safe machine learning workflow with explainabilit
 
 ---
 
+**Live demo:** [credit-risk-platform.vercel.app](https://credit-risk-platform.vercel.app)
+*(backend runs on Render's free tier — first request after idle time may take 30-60s to wake up)*
+
 ## Overview
 
 Credit-risk prediction is a highly imbalanced classification problem where the cost of incorrectly missing a high-risk applicant can be substantially different from the cost of incorrectly flagging a low-risk applicant.
