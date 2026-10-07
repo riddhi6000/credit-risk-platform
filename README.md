@@ -6,8 +6,9 @@ The project combines a leakage-safe machine learning workflow with explainabilit
 
 ---
 
-**Live demo:** [credit-risk-platform.vercel.app](credit-risk-platform-sigma.vercel.app)
-*(backend runs on Render's free tier — first request after idle time may take 30-60s to wake up)*
+**Live demo:** [credit-risk-platform-sigma.vercel.app](https://credit-risk-platform-sigma.vercel.app)
+
+*(Backend runs on Render's free tier — first request after idle time may take 30–60s to wake up.)*
 
 ## Overview
 
